@@ -5,15 +5,28 @@
 
 body  {  
     background-image: url("steamgames.jpg");
+    background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
     margin: 0px;
     padding: 0px;
     min-height: 100vh;
 }
 
-.stbc {
-  opacity: 0.2;
-  width: 100%;
+.teksts  {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  margin-top: 50px;
+
 }
+
+ p {
+  color: red;
+  font-size: larger;
+  font-weight: 1000;
+}
+
 
 
 .glow-on-hover {
@@ -90,13 +103,6 @@ body  {
 
 
 
-.centered {
-  position: absolute;
-  top: 20%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  font-size: larger;
-  font-weight: 800;}
   
 
 .container{
@@ -104,7 +110,7 @@ body  {
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    background-color: aliceblue;
+    
     position: relative;
     text-align: left;
     color: white;
@@ -116,6 +122,9 @@ body  {
     justify-content: space-between;
     width: 100%;
     height: 80px;
+    position: sticky;
+  top: 0;
+  z-index: 999;
     background-color: black
 }
 
@@ -132,14 +141,16 @@ body  {
 
   .content {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    background-color: black;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
   }
 
   .content-mid {
-    background-color: #46484a;
-    height: 400px;
+    background-color: #3d3d3d;
+    height: 100vh;
     width: 100%;
   }
   

@@ -1,24 +1,6 @@
 *{
-    padding: 0;
     margin: 0;
-}
-
-body {
-    width: 100%;
-    min-height: 100vh;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    
-    width: 100%;
-    height: 80px;
-    background-color: black
-}
-
-.logo {
-    margin-left: 20px;
+    padding: 0;
 }
 
 .glow-on-hover {
@@ -80,27 +62,21 @@ body {
     border-radius: 10px;
     transition-duration: 0.5s;
   }
-
   
   @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
   }
-
+  
   .btn-group {
     display: flex;
     width: 100%;
     justify-content: space-around;
   }
-
-  .centered {
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    font-size: larger;
-    font-weight: 800;}
+  
+  
+  
     
   
   .container{
@@ -108,11 +84,35 @@ body {
       flex-direction: column;
       width: 100%;
       min-height: 100vh;
-      background-color: aliceblue;
+      
       position: relative;
       text-align: left;
       color: white;
       
+  }
+  
+  .header {
+      display: flex;
+      justify-content: space-between;
+      position: sticky;
+  top: 0;
+  z-index: 999;
+      width: 100%;
+      height: 80px;
+      background-color: black
+  }
+  
+  .logo {
+      margin-left: 20px;
+  }
+
+  .browse-box {
+    display: flex;
+    justify-content: center;
+    
+    background-color: #3d3d3d;
+    height: 100%;
+    width: 80%;
   }
 
   .main-cont {
@@ -131,15 +131,31 @@ body {
     align-items: center;
   }
 
-  .trend-box {
+.InputContainer {
+    margin-top: 100px;
+    width: 400px;
+    height: 50px;
     display: flex;
-    height: 800px;
-    width: 80%;
-    background-color: #3d3d3d;
-
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, purple, pink);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
   }
-
-  h1 {
-  font-family: sans-serif;
   
+  .input {
+    
+    width: 400px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding-left: 15px;
+    letter-spacing: 0.8px;
+    color: rgb(19, 19, 19);
+    font-size: 13.4px;
   }
+  
