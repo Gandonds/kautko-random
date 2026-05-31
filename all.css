@@ -1,10 +1,15 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body {
-    width: 100%;
+body  {  
+    background-image: url("steamgames.jpg");
+    background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+    margin: 0px;
+    padding: 0px;
     min-height: 100vh;
 }
 
@@ -12,11 +17,11 @@ body {
     display: flex;
     justify-content: space-between;
     position: sticky;
-  top: 0;
-  z-index: 999;
+    top: 0;
+    z-index: 999;
     width: 100%;
     height: 80px;
-    background-color: black
+    background-color: black;
 }
 
 .logo {
@@ -35,10 +40,9 @@ body {
     z-index: 0;
     border-radius: 10px;
     margin-top: 15px;
-    
-  }
+}
   
-  .glow-on-hover:before {
+.glow-on-hover:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
@@ -53,24 +57,13 @@ body {
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
-  }
+}
   
-  .glow-on-hover:active {
-    color: white
-    
-  }
-  
-  .glow-on-hover:active:after {
-    background: transparent;
-    transition-duration: 0.5s;
-  }
-  
-  .glow-on-hover:hover:before {
+.glow-on-hover:hover:before {
     opacity: 1;
-    
-  }
+}
   
-  .glow-on-hover:after {
+.glow-on-hover:after {
     z-index: -1;
     content: '';
     position: absolute;
@@ -80,116 +73,89 @@ body {
     left: 0;
     top: 0;
     border-radius: 10px;
-    transition-duration: 0.5s;
-  }
+}
 
-  
-  @keyframes glowing {
+@keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
-  }
+}
 
-  .btn-group {
+.btn-group {
     display: flex;
     width: 100%;
     justify-content: space-around;
-  }
+}
 
-  .centered {
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    font-size: larger;
-    font-weight: 800;}
-    
-  
-  .container{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      min-height: 100vh;
-      background-color: white;
-      position: relative;
-      text-align: left;
-      color: white;
-      
-  }
-
-  .main-cont {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    min-height: 100vh;
-    width: 1400px; 
-  }
-
-  .game-box {
-    display: flex;
-    justify-content: center;
-    background-color: #3d3d3d;
-    height: 999px;
-    width: 80%;
-
-  }
-
-  .rec-box {
+.container {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    height: 100%;
-    background-color: purple;
-  }
-
-  .rec-top {
-    display: flex;
-    justify-content: space-around;
-    background-color: lightpink;
-    height: 70px;
     width: 100%;
-  }
+    min-height: 100vh;
+}
 
-  .rec-btn  {
-    border-radius: 15px;
-    color: black;
-    background-color: white;
-    width: auto;
-    height: 100%;
-  }
-
-  .InputContainer {
-    margin-top: 150px;
-    width: 400px;
-    height: 50px;
+.main-cont {
     display: flex;
-    align-items: center;
+    width: 100%;
     justify-content: center;
-    background: linear-gradient(to bottom,purple,lightpink);
+    padding: 40px 0;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 90%;
+}
+
+.game-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    background-color: #3d3d3d;
+    width: 100%;
+    padding: 20px;
     border-radius: 15px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
-  }
-  
-  .input {
-    width: 400px;
-    height: 40px;
-    border: none;
-    outline: none;
-    background-color: rgb(255, 255, 255);
-    border-radius: 15px;
-    padding-left: 15px;
-    letter-spacing: 0.8px;
-    color: rgb(19, 19, 19);
-    font-size: 13.4px;
-  }
+}
+
+.game-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.game-card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0 5px 0;
+}
+
+.game-card p {
+    color: #ff7300;
+    font-size: 0.9rem;
+}
+
+.game-info {
+    text-align: left; 
+    margin-top: 10px;
+}
+
+.game-card p {
+    color: #ccc !important; 
+    font-size: 0.85rem !important;
+    font-weight: normal !important;
+    margin: 4px 0 !important;
+}
+
+.game-card p span {
+    font-weight: bold;
+}
