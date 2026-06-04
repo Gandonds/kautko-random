@@ -1,0 +1,21 @@
+.InputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, purple, pink);
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 400px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 15px;
+    padding-left: 15px;
+    font-size: 13.4px;
+    color: rgb(19, 19, 19);
+}
